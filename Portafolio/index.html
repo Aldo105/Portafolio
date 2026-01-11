@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Data Scientist | Aldo Jared Garcia Arvizu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#1e293b',
+                            accent: '#38bdf8', // Azul tipo Data Science
+                            text: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Efecto de cristal para el navbar */
+        .glass {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-200 font-sans antialiased">
+
+    <nav class="fixed w-full z-50 glass border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="font-bold text-xl tracking-wider text-brand-accent">
+                    ALDO<span class="text-white">DEV</span>
+                </a>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-brand-accent transition">Inicio</a>
+                    <a href="#about" class="hover:text-brand-accent transition">Sobre Mí</a>
+                    <a href="#projects" class="hover:text-brand-accent transition">Proyectos</a>
+                    <a href="#contact" class="hover:text-brand-accent transition">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16">
+        <div class="text-center px-4 max-w-4xl mx-auto">
+            <div class="mb-4 inline-block px-3 py-1 rounded-full bg-slate-800 text-brand-accent text-sm font-semibold border border-slate-700">
+                Data Science & Backend Developer
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Transformando datos en <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+                    decisiones inteligentes
+                </span>
+            </h1>
+            <p class="text-xl text-brand-text mb-10 max-w-2xl mx-auto">
+                Soy Aldo Jared. Especialista en construir pipelines ETL, análisis estadístico avanzado y despliegue de modelos de Machine Learning.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#projects" class="px-8 py-3 bg-brand-accent text-brand-dark font-bold rounded-lg hover:bg-cyan-300 transition shadow-lg shadow-cyan-500/20">
+                    Ver Proyectos
+                </a>
+                <a href="#contact" class="px-8 py-3 border border-slate-600 rounded-lg hover:border-brand-accent hover:text-brand-accent transition">
+                    Contactarme
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <i data-lucide="user" class="text-brand-accent"></i> Sobre Mí
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg text-brand-text mb-6">
+                        Soy un apasionado por encontrar patrones ocultos en grandes volúmenes de datos. Mi enfoque combina la solidez de la **ingeniería de software (Backend)** con la curiosidad científica de la **estadística**.
+                    </p>
+                    <p class="text-lg text-brand-text mb-6">
+                        Más allá del código, creo firmemente en el aprendizaje continuo. Cuando no estoy entrenando modelos o escribiendo queries en SQL, me encontrarás disfrutando de mis hobbies.
+                    </p>
+                    
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 mt-6">
+                        <h3 class="text-white font-bold mb-4">Fuera de la terminal:</h3>
+                        <ul class="space-y-3 text-brand-text">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="coffee" class="text-yellow-500 w-5"></i>
+                                <span>Amante del buen café y la lectura técnica.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="gamepad-2" class="text-purple-500 w-5"></i>
+                                <span>Gaming estratégico en mis ratos libres.</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="dumbbell" class="text-green-500 w-5"></i>
+                                <span>Entrenamiento funcional para despejar la mente.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition duration-300">
+                        <i data-lucide="database" class="text-brand-accent w-8 h-8 mb-4"></i>
+                        <h3 class="text-white font-bold text-xl">Data Engineering</h3>
+                        <p class="text-sm text-brand-text mt-2">SQL, SQLite, ETL Pipelines, Data Cleaning.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition duration-300">
+                        <i data-lucide="brain-circuit" class="text-brand-accent w-8 h-8 mb-4"></i>
+                        <h3 class="text-white font-bold text-xl">Machine Learning</h3>
+                        <p class="text-sm text-brand-text mt-2">Scikit-Learn, Regresión Logística, Random Forest, Pandas.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition duration-300">
+                        <i data-lucide="server" class="text-brand-accent w-8 h-8 mb-4"></i>
+                        <h3 class="text-white font-bold text-xl">Backend</h3>
+                        <p class="text-sm text-brand-text mt-2">Python, APIs, Integración de bases de datos.</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-brand-accent transition duration-300">
+                        <i data-lucide="bar-chart-3" class="text-brand-accent w-8 h-8 mb-4"></i>
+                        <h3 class="text-white font-bold text-xl">Analytics</h3>
+                        <p class="text-sm text-brand-text mt-2">Matplotlib, Seaborn, Tableau, Estadística inferencial.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <i data-lucide="folder-git-2" class="text-brand-accent"></i> Proyectos Destacados
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-brand-light rounded-xl overflow-hidden border border-slate-700 hover:shadow-2xl hover:shadow-cyan-500/10 transition group">
+                    <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700 group-hover:bg-slate-700 transition">
+                        <i data-lucide="trending-down" class="w-16 h-16 text-red-400"></i>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition">Bank Churn Prediction</h3>
+                            <span class="bg-green-900 text-green-300 text-xs px-2 py-1 rounded border border-green-700">Completado</span>
+                        </div>
+                        <p class="text-brand-text text-sm mb-4">
+                            Pipeline "End-to-End" para predecir la fuga de clientes bancarios. 
+                            Incluye ingesta de datos en <strong>SQLite</strong>, limpieza estadística y un modelo de <strong>Regresión Logística Balanceada</strong>.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-slate-800 text-blue-300 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-slate-800 text-yellow-300 px-2 py-1 rounded">SQL / SQLite</span>
+                            <span class="text-xs bg-slate-800 text-orange-300 px-2 py-1 rounded">Scikit-Learn</span>
+                        </div>
+
+                        <div class="flex gap-4">
+                             <a href="https://github.com/Aldo105/Bank-Churn-Prediction/tree/main/Proyecto_redes_neuronales" target="_blank" class="flex items-center gap-2 text-white hover:text-brand-accent text-sm font-medium">
+                                <i data-lucide="github" class="w-4 h-4"></i> Ver Código
+                            </a>
+
+                             <a href="https://github.com/Aldo105/Bank-Churn-Prediction/blob/main/README.md" target="_blank" class="flex items-center gap-2 text-white hover:text-brand-accent text-sm font-medium">
+                                 <i data-lucide="file-text" class="w-4 h-4"></i> Ver Reporte
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-light rounded-xl overflow-hidden border border-slate-700 hover:shadow-xl transition opacity-75">
+                    <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700">
+                        <i data-lucide="shopping-cart" class="w-16 h-16 text-slate-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Sales Forecasting (Próximamente)</h3>
+                        <p class="text-brand-text text-sm mb-4">
+                            Predicción de ventas retail utilizando series de tiempo y modelos XGBoost.
+                        </p>
+                        <span class="text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">En construcción</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-6">¿Trabajamos juntos?</h2>
+            <p class="text-brand-text mb-8 max-w-lg mx-auto">
+                Estoy buscando oportunidades como Data Scientist 
+            </p>
+            
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://www.linkedin.com/in/aldo-jared-garcia-arvizu-879278297" target="_blank" class="p-3 bg-slate-800 rounded-full hover:bg-brand-accent hover:text-brand-dark transition duration-300">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://github.com/Aldo105" target="_blank" class="p-3 bg-slate-800 rounded-full hover:bg-brand-accent hover:text-brand-dark transition duration-300">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="aldojared815@gmail.com" class="p-3 bg-slate-800 rounded-full hover:bg-brand-accent hover:text-brand-dark transition duration-300">
+                    <i data-lucide="mail"></i>
+                </a>
+            </div>
+
+            <p class="text-slate-600 text-sm">
+                &copy; <span id="year"></span> Aldo Jared Garcia Arvizu. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Inicializar Iconos
+        lucide.createIcons();
+
+        // 2. Año automático en el footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 3. Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
