@@ -50,6 +50,154 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .btn-galaxy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 13rem;
+        overflow: hidden;
+        height: 3rem;
+        background-size: 300% 300%;
+        cursor: pointer;
+        backdrop-filter: blur(1rem);
+        border-radius: 5rem;
+        transition: 0.5s;
+        animation: gradient_301 5s ease infinite;
+        border: double 4px transparent;
+        
+        background-image: linear-gradient(#0f172a, #0f172a), 
+            linear-gradient(
+            137.48deg,
+            #22d3ee 10%,  
+            #3b82f6 45%,  
+            #0ea5e9 67%,  
+            #6366f1 87%   
+            );
+            
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        text-decoration: none;
+        position: relative;
+        z-index: 10;
+        }
+
+        .galaxy-container-stars {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: 0.5s;
+        backdrop-filter: blur(1rem);
+        border-radius: 5rem;
+        }
+
+        .btn-galaxy strong {
+        z-index: 2;
+        font-family: "Inter", sans-serif;
+        font-size: 12px;
+        letter-spacing: 5px;
+        color: #ffffff;
+        text-shadow: 0 0 4px white;
+        text-transform: uppercase;
+        }
+
+        .galaxy-glow {
+        position: absolute;
+        display: flex;
+        width: 12rem;
+        }
+
+        .galaxy-circle {
+        width: 100%;
+        height: 30px;
+        filter: blur(2rem);
+        animation: pulse_3011 4s infinite;
+        z-index: -1;
+        }
+
+        .galaxy-circle:nth-of-type(1) {
+        background: rgba(34, 211, 238, 0.7);
+        }
+
+        .galaxy-circle:nth-of-type(2) {
+        background: rgba(59, 130, 246, 0.7); 
+        }
+
+        .btn-galaxy:hover .galaxy-container-stars {
+        z-index: 1;
+        background-color: #0f172a; 
+        }
+
+        .btn-galaxy:hover {
+        transform: scale(1.1);
+        }
+
+        .btn-galaxy:active {
+        border: double 4px #22d3ee; 
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        animation: none;
+        }
+
+        .btn-galaxy:active .galaxy-circle {
+        background: #22d3ee;
+        }
+
+        .galaxy-stars {
+        position: relative;
+        background: transparent;
+        width: 200rem;
+        height: 200rem;
+        }
+
+        .galaxy-stars::after {
+        content: "";
+        position: absolute;
+        top: -10rem;
+        left: -100rem;
+        width: 100%;
+        height: 100%;
+        animation: animStarRotate 90s linear infinite;
+        background-image: radial-gradient(#ffffff 1px, transparent 1%);
+        background-size: 50px 50px;
+        }
+
+        .galaxy-stars::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 170%;
+        height: 500%;
+        animation: animStar 60s linear infinite;
+        background-image: radial-gradient(#ffffff 1px, transparent 1%);
+        background-size: 50px 50px;
+        opacity: 0.5;
+        }
+
+        @keyframes animStar {
+        from { transform: translateY(0); }
+        to { transform: translateY(-135rem); }
+        }
+
+        @keyframes animStarRotate {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0); }
+        }
+
+        @keyframes gradient_301 {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+        }
+
+        @keyframes pulse_3011 {
+        0% { transform: scale(0.75); box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); }
+        100% { transform: scale(0.75); box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+        }
+
         .si { vertical-align: middle; margin-right: 4px; }
     </style>
 </head>
@@ -64,6 +212,15 @@
                 </a>
 
                 <div class="hidden md:flex items-center space-x-1" data-aos="fade-left">
+                    <a href="https://drive.google.com/drive/folders/1BP7g7ozs6MmAVQdnlpfMCD-XtTXQ4qZt?usp=sharing" target="_blank" class="btn-galaxy mr-4 scale-75 md:scale-90"> <strong>DESCARGAR CV</strong>
+                    <div class="galaxy-container-stars">
+                        <div class="galaxy-stars"></div>
+                    </div>
+                    <div class="galaxy-glow">
+                        <div class="galaxy-circle"></div>
+                        <div class="galaxy-circle"></div>
+                    </div>
+                    </a>
                     <a href="#home" class="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-800 hover:text-brand-accent transition-all duration-300">
                         <i data-lucide="home" class="w-4 h-4"></i> Inicio
                     </a>
@@ -78,6 +235,7 @@
                     </a>
                     <a href="#contact" class="flex items-center gap-2 ml-4 px-5 py-2 rounded-full bg-brand-accent text-brand-dark font-bold text-sm hover:bg-cyan-400 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
                         <i data-lucide="send" class="w-4 h-4"></i> Contacto
+                    </a>
                     </a>
                 </div>
             </div>
@@ -287,6 +445,48 @@
                     </div>
                 </div>
 
+               <div class="bg-brand-dark rounded-xl overflow-hidden border border-slate-700 hover:shadow-2xl hover:shadow-cyan-500/10 transition group hover:-translate-y-2 duration-300" data-aos="fade-up">
+                    <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700 group-hover:bg-slate-700 transition">
+                        <i data-lucide="plane" class="w-16 h-16 text-blue-400 group-hover:scale-110 transition duration-300"></i>
+                    </div>   
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-brand-accent transition">Airline Data Analysis</h3>
+                            <span class="bg-green-900/50 text-green-300 text-xs px-2 py-1 rounded border border-green-700/50">Completado</span>
+                        </div>
+                        <p class="text-brand-text text-sm mb-4">
+                            Modelo matemático para predecir el comportamiento de fuga de clientes.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-blue-300 px-2 py-1 rounded flex items-center">
+                                <i class="si si-python"></i> Python
+                            </span>
+                            
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-yellow-300 px-2 py-1 rounded flex items-center">
+                                <i class="si si-pandas"></i> Seaborn & Matplotlib
+                            </span>
+                            
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-orange-300 px-2 py-1 rounded flex items-center">
+                                <i class="si si-jupyter"></i> Statsmodels
+                            </span>
+
+                            <span class="text-xs bg-slate-800 border border-slate-700 text-red-300 px-2 py-1 rounded flex items-center">
+                                <i class="si si-foodpanda"></i> Pandas
+                            </span>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <a href="https://github.com/Aldo105/An-lisis-de-datos-de-Aerol-neas/tree/main/Proyecto%20Aereolineas" target="_blank" class="flex items-center gap-2 text-white hover:text-brand-accent text-sm font-medium transition">
+                                <i class="si si-github"></i> Ver Código
+                            </a>
+                            <a href="https://github.com/Aldo105/An-lisis-de-datos-de-Aerol-neas/blob/main/README.md" target="_blank" class="flex items-center gap-2 text-white hover:text-brand-accent text-sm font-medium transition">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Ver Reporte
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="bg-brand-dark rounded-xl overflow-hidden border border-slate-700 hover:shadow-xl transition opacity-75 hover:opacity-100" data-aos="fade-up" data-aos-delay="100">
                     <div class="h-48 bg-slate-800 flex items-center justify-center border-b border-slate-700">
                         <i data-lucide="shopping-cart" class="w-16 h-16 text-slate-600"></i>
@@ -306,6 +506,18 @@
     <footer id="contact" class="bg-slate-900 border-t border-slate-800 py-16">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-white mb-6" data-aos="fade-down">¿Listo para colaborar?</h2>
+           <div class="flex justify-center mb-10" data-aos="zoom-in">
+             <a href="https://drive.google.com/drive/folders/1BP7g7ozs6MmAVQdnlpfMCD-XtTXQ4qZt?usp=sharing" target="_blank" class="btn-galaxy">
+               <strong>DESCARGAR CV</strong>
+               <div class="galaxy-container-stars">
+                   <div class="galaxy-stars"></div>
+                   </div>
+                   <div class="galaxy-glow">
+                      <div class="galaxy-circle"></div>
+                        <div class="galaxy-circle"></div>
+                  </div>
+            </a>
+           </div>
             <div class="flex justify-center gap-8 mb-12" data-aos="zoom-in">
                 <a href="https://www.linkedin.com/in/aldo-jared-garcia-arvizu-879278297" target="_blank" class="p-4 bg-slate-800 rounded-full hover:bg-brand-accent hover:text-brand-dark transition duration-300 transform hover:scale-110">
                     <i class="si si-linkedin w-6 h-6"></i>
